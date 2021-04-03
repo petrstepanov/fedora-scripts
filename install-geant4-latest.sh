@@ -28,7 +28,7 @@ then
 	cd ~/Downloads
 	wget -O $filename $url
 
-	# Unpack ROOT archive
+	# Unpack Geant4 archive
 	mkdir -p ~/Source && cd ~/Source
 	tar -xvf ~/Downloads/$filename
 

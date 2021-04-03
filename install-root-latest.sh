@@ -33,6 +33,7 @@ then
 	rm -rf ~/Source/root-$v-build && mkdir -p ~/Source/root-$v-build && cd ~/Source/root-$v-build
 
 	# Unset environment libraries (if previously installed ROOT)
+	# https://root-forum.cern.ch/t/cannot-compile-root-v6-22-08-with-debug-symbols-and-all-options/44242
 	unset ROOTSYS
 	unset LD_LIBRARY_PATH
 
