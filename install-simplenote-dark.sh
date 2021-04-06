@@ -23,22 +23,30 @@ then
 	cd ~/Downloads
 	wget -O $filename $url
 
-	# Install
-	rpm -i $filename
+	# Uninstall previous version and install new one
+	echo "Uninstalling old version..."
+	sudo rpm -e --allmatches simplenote
+
+	echo "Installing new version..."
+	sudo rpm -i $filename
 	
-	# Apply dark theme
-	mkdir -p ~/.config/Simplenote/gtk-3.0
-	printf '%s\n%s\n' '[Settings]' 'gtk-application-prefer-dark-theme=true' > ~/.config/Simplenote/gtk-3.0/settings.ini
+	# Apply dark theme (">" - write, ">>" - append)
+	mkdir -p ~/.config-dark/gtk-3.0
+	echo "[Settings]" > ~/.config-dark/gtk-3.0/settings.ini
+	echo "gtk-application-prefer-dark-theme=true" >> ~/.config-dark/gtk-3.0/settings.ini
+	echo "gtk-theme-name=Adwaita:dark" >> ~/.config-dark/gtk-3.0/settings.ini
 	
 	# Make alias for simplenote command. In ~/.bashrc add line:
-	echo "alias simplenote='env XDG_CONFIG_HOME=$HOME/.config/Simplenote `which simplenote`'" >> ~/.bashrc
+	APP="simplenote"
+	echo "alias $APP='env XDG_CONFIG_HOME=$HOME/.config-dark `which $APP`'" >> ~/.bashrc
 	source ~/.bashrc
-	# Hint: now you can run dark Simplenote in terminal with regular 'simplenote' command
+	# Hint: now you can run dark app in terminal with regular '<app-name>' command
 	
-	# Override Simplenote launcher
-	cp /usr/share/applications/simplenote.desktop ~/.local/share/applications/simplenote.desktop
-	sed -i "s;Exec=/opt/Simplenote/simplenote %U;Exec=env XDG_CONFIG_HOME=$HOME/.config/Simplenote /opt/Simplenote/simplenote %U;" ~/.local/share/applications/simplenote.desktop
-	# Hint: now the default launcher will launch Simplenote in dark mode
+	# Override application launcher
+	DESKTOP_FILE="simplenote.desktop"
+	cp /usr/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FILE
+	sed -i "s;Exec=;Exec=env XDG_CONFIG_HOME=$HOME/.config-dark ;" ~/.local/share/applications/$DESKTOP_FILE
+	# Hint: now the default launcher will launch app in dark mode
 else
 	echo Cannot determine the recent Simplenote version
 fi

@@ -3,7 +3,8 @@ Version=1.1
 Type=Application
 Name=SoundCloud
 Icon=gnome-soundcloud
-#Exec=env XDG_CONFIG_HOME=$HOME/.config/chromium-dark chromium-browser --app=https://soundcloud.com
+# Reddit explains how to create Chromium PWA web application with regular window decorations
+# https://www.reddit.com/r/kde/comments/i28jni/chrome_app_window_decoration/
 Exec=env XDG_CONFIG_HOME=/.config/chromium-dark chromium-browser --profile-directory=Default --app=https://soundcloud.com
 Actions=
 Categories=chrome-apps;

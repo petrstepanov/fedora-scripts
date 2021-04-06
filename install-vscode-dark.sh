@@ -6,17 +6,20 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update
 sudo dnf install code
 
-# Apply dark theme
-mkdir -p ~/.config/Code/gtk-3.0
-printf '%s\n%s\n' '[Settings]' 'gtk-application-prefer-dark-theme=true' > ~/.config/Code/gtk-3.0/settings.ini
+# Apply dark theme (">" - write, ">>" - append)
+mkdir -p ~/.config-dark/gtk-3.0
+echo "[Settings]" > ~/.config-dark/gtk-3.0/settings.ini
+echo "gtk-application-prefer-dark-theme=true" >> ~/.config-dark/gtk-3.0/settings.ini
+echo "gtk-theme-name=Adwaita:dark" >> ~/.config-dark/gtk-3.0/settings.ini
 
 # Make alias for simplenote command. In ~/.bashrc add line:
-echo "alias code='env XDG_CONFIG_HOME=$HOME/.config/Code `which code`'" >> ~/.bashrc
+APP="code"
+echo "alias $APP='env XDG_CONFIG_HOME=$HOME/.config-dark `which $APP`'" >> ~/.bashrc
 source ~/.bashrc
-# Hint: now you can run dark Code in terminal with regular 'code' command
+# Hint: now you can run dark app in terminal with regular '<app-name>' command
 
-# Override Code launcher
-cp /usr/share/applications/code.desktop ~/.local/share/applications/code.desktop
-sed -i "s;Exec=/usr/share/code/code --no-sandbox --unity-launch %F;Exec=env XDG_CONFIG_HOME=$HOME/.config/Code /usr/bin/code --no-sandbox --unity-launch %F;" ~/.local/share/applications/code.desktop
-# Hint: now the default launcher will launch Simplenote in dark mode
-
+# Override application launcher
+DESKTOP_FILE="code.desktop"
+cp /usr/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FILE
+sed -i "s;Exec=;Exec=env XDG_CONFIG_HOME=$HOME/.config-dark ;" ~/.local/share/applications/$DESKTOP_FILE
+# Hint: now the default launcher will launch app in dark mode
