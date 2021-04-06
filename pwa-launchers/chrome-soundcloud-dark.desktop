@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=SoundCloud
+Icon=gnome-soundcloud
+#Exec=env XDG_CONFIG_HOME=$HOME/.config/chromium-dark chromium-browser --app=https://soundcloud.com
+Exec=env XDG_CONFIG_HOME=/.config/chromium-dark chromium-browser --profile-directory=Default --app=https://soundcloud.com
+Actions=
+Categories=chrome-apps;
+# This can be obtained by typing "xprop WM_CLASS" in terminal and clicking on the window
+# It helps grouping windows under same icon in the dock
+StartupWMClass=soundcloud.com

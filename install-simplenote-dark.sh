@@ -31,13 +31,13 @@ then
 	printf '%s\n%s\n' '[Settings]' 'gtk-application-prefer-dark-theme=true' > ~/.config/Simplenote/gtk-3.0/settings.ini
 	
 	# Make alias for simplenote command. In ~/.bashrc add line:
-	echo 'alias simplenote="env XDG_CONFIG_HOME=$HOME/.config/Simplenote `which simplenote`"' >> ~/.bashrc
+	echo "alias simplenote='env XDG_CONFIG_HOME=$HOME/.config/Simplenote `which simplenote`'" >> ~/.bashrc
 	source ~/.bashrc
 	# Hint: now you can run dark Simplenote in terminal with regular 'simplenote' command
 	
 	# Override Simplenote launcher
 	cp /usr/share/applications/simplenote.desktop ~/.local/share/applications/simplenote.desktop
-	sed -i 's/Exec=\/opt\/Simplenote\/simplenote %U/Exec=env XDG_CONFIG_HOME=.config\/Simplenote \/opt\/Simplenote\/simplenote %U/' ~/.local/share/applications/simplenote.desktop
+	sed -i "s;Exec=/opt/Simplenote/simplenote %U;Exec=env XDG_CONFIG_HOME=$HOME/.config/Simplenote /opt/Simplenote/simplenote %U;" ~/.local/share/applications/simplenote.desktop
 	# Hint: now the default launcher will launch Simplenote in dark mode
 else
 	echo Cannot determine the recent Simplenote version
