@@ -17,25 +17,27 @@ echo "gtk-theme-name=Adwaita:dark" >> ~/.config-dark/gtk-3.0/settings.ini
 
 # Make alias dark Chromium
 echo "Making dark chromium alias (run with chromium-browser-dark)..."
-echo "alias chromium-browser-dark='env XDG_CONFIG_HOME=$HOME/.config-dark `which chromium-browser`'" >> ~/.bashrc
+sed -i "/#alias-chromium-browser-dark/d" ~/.bashrc
+echo "alias chromium-browser-dark='env XDG_CONFIG_HOME=$HOME/.config-dark `which chromium-browser`' #alias-chromium-browser-dark" >> ~/.bashrc
 source ~/.bashrc
 # Hint: now you can run dark Chromium in terminal with regular 'chromium-browser-dark' command
 
 # Make Dark Chromium launcher (needs to install the extensions in PWAs)
 DESKTOP_FILE="chromium-browser.desktop"
-cp /usr/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FILE
+DESKTOP_FILE_DARK="chromium-browser-dark.desktop"
+cp /usr/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FILE_DARK
 
 # using double quotes in sed will tell shell to substitute environment variables
 # https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
 # sed allows usinf any character as a separator (trying ;)
 # https://unix.stackexchange.com/questions/379572/escaping-both-forward-slash-and-back-slash-with-sed
-sed -i "s;Chromium Web Browser;Chromium Web Browser (Dark);" ~/.local/share/applications/$DESKTOP_FILE
-sed -i "s;Exec=;Exec=env XDG_CONFIG_HOME=$HOME/.config-dark ;" ~/.local/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FILE
+sed -i "s;Chromium Web Browser;Chromium Web Browser (Dark);" ~/.local/share/applications/$DESKTOP_FILE_DARK
+sed -i "s;Exec=;Exec=env XDG_CONFIG_HOME=$HOME/.config-dark ;" ~/.local/share/applications/$DESKTOP_FILE_DARK
 
 echo "Installing launchers..."
 xdg-desktop-menu install ./pwa-launchers/*
 
-# fix path in the installed launcher
+# add user's home folder path to installed launchers
 sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-soundcloud-dark.desktop
 
 echo "now open 'chromium-browser-dark'"

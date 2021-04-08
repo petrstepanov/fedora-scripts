@@ -38,7 +38,8 @@ then
 	
 	# Make alias for simplenote command. In ~/.bashrc add line:
 	APP="simplenote"
-	echo "alias $APP='env XDG_CONFIG_HOME=$HOME/.config-dark `which $APP`'" >> ~/.bashrc
+	sed -i "/#alias-$APP/d" ~/.bashrc
+	echo "alias $APP='env XDG_CONFIG_HOME=$HOME/.config-dark `which $APP`' #alias-$APP" >> ~/.bashrc
 	source ~/.bashrc
 	# Hint: now you can run dark app in terminal with regular '<app-name>' command
 	

@@ -55,7 +55,8 @@ then
 	
 	# Source Geant4
 	cd ~/Applications/geant$v
-	echo source `find $(pwd) -name "geant4.sh"` >> ~/.bashrc
+	sed -i "/#source-geant4/d" ~/.bashrc		
+	echo source `find $(pwd) -name "geant4.sh" #source-geant4` >> ~/.bashrc
 	source ~/.bashrc	
 else
 	echo Cannot determine the recent Geant version

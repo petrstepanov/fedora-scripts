@@ -43,7 +43,8 @@ then
 
 	# Source ROOT
 	cd ~/Applications/root-$v
-	echo source `find $(pwd) -name "thisroot.sh"` >> ~/.bashrc
+	sed -i "/#source-thisroot/d" ~/.bashrc
+	echo source `find $(pwd) -name "thisroot.sh" #source-thisroot` >> ~/.bashrc
 	source ~/.bashrc	
 
 else
