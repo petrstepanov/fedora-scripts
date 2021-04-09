@@ -39,6 +39,7 @@ xdg-desktop-menu install ./pwa-launchers/*
 
 # add user's home folder path to installed launchers
 sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-soundcloud-dark.desktop
+sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-figma-dark.desktop
 
 echo "now open 'chromium-browser-dark'"
 echo "install SoundCloud extension https://addoncrop.com/soundcloud-music-downloader/"

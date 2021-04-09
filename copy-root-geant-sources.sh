@@ -16,3 +16,6 @@ echo "Found Geant4 source directory: $geantDir"
 rm -rf $destDir && mkdir $destDir
 copySources $rootDir $destDir
 copySources $geantDir $destDir
+
+cd $destDir
+chmod -w ./*
