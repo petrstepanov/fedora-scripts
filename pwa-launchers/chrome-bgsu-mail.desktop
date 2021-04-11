@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=BGSU Mail
+Icon=gnome-outlook
+# Reddit explains how to create Chromium PWA web application with regular window decorations
+# https://www.reddit.com/r/kde/comments/i28jni/chrome_app_window_decoration/
+Exec=chromium-browser --profile-directory=Default --app=https://outlook.office.com/mail/inbox
+Categories=chrome-apps;
+# This can be obtained by typing "xprop WM_CLASS" in terminal and clicking on the window
+# It helps grouping windows under same icon in the dock
+StartupWMClass=outlook.office.com__mail_inbox
