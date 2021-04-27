@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ROOT Browser
+Comment=Open CERN ROOT files
+Icon=gnome-cernroot
+Exec=rootbrowse %F
+Terminal=true
+Categories=Science

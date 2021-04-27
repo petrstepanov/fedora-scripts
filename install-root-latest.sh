@@ -46,7 +46,6 @@ then
 	sed -i "/#source-thisroot/d" ~/.bashrc
 	echo source `find $(pwd) -name "thisroot.sh" #source-thisroot` >> ~/.bashrc
 	source ~/.bashrc	
-
 else
 	echo Cannot determine the recent ROOT version
 fi
