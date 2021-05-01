@@ -24,7 +24,7 @@
         "hotKey": "<tab>"
     },
     "filter": {
-        "regex": null,
+        "regex": "Eclipse.Eclipse",
         "isRecursive": false
     },
     "sendMode": "kb"
