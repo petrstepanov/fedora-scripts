@@ -35,11 +35,13 @@ cp /usr/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FI
 
 # using double quotes in sed will tell shell to substitute environment variables
 # https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
-# sed allows usinf any character as a separator (trying ;)
+# sed allows using any character as a separator (trying ;)
 # https://unix.stackexchange.com/questions/379572/escaping-both-forward-slash-and-back-slash-with-sed
 sed -i "s;Chromium Web Browser;Chromium Web Browser (Dark);" ~/.local/share/applications/$DESKTOP_FILE_DARK
 sed -i "s;Icon=chromium-browser;Icon=gnome-chromium-dark;" ~/.local/share/applications/$DESKTOP_FILE_DARK
 sed -i "s;Exec=;Exec=env XDG_CONFIG_HOME=$HOME/.config-dark ;" ~/.local/share/applications/$DESKTOP_FILE_DARK
+sed -i "s;chromium-browser;chromium-browser --class=chromiumdark;" ~/.local/share/applications/$DESKTOP_FILE_DARK
+sed -i "s;StartupWMClass=Chromium-browser;StartupWMClass=chromiumdark;" ~/.local/share/applications/$DESKTOP_FILE_DARK
 
 echo "Installing launchers..."
 xdg-desktop-menu install ./pwa-launchers/*
@@ -49,6 +51,7 @@ sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/c
 sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-figma-dark.desktop
 sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-snipcart-dark.desktop
 sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-zoho-dark.desktop
+sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-slack-dark.desktop
 
 # Explicitly set --user-data-dir=~/.config/chromium for Chromium
 # DESKTOP_FILE="chromium-browser.desktop"

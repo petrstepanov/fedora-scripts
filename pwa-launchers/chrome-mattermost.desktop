@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Mattermost
+Icon=gnome-mattermost
+# Reddit explains how to create Chromium PWA web application with regular window decorations
+# https://www.reddit.com/r/kde/comments/i28jni/chrome_app_window_decoration/
+Exec=chromium-browser --profile-directory=Default --app=https://chat.sdcc.bnl.gov/eic
+Categories=chrome-apps;
+# This can be obtained by typing "xprop WM_CLASS" in terminal and clicking on the window
+# It helps grouping windows under same icon in the dock
+StartupWMClass=chat.sdcc.bnl.gov__eic
+
+# Chomium opens with Terminal message "Opening in existing browser session."
+# Googled - it seems to be a bug. Workaround is 
+# https://askubuntu.com/questions/35392/how-to-launch-a-new-instance-of-google-chrome-from-the-command-line
+# add "--user-data-dir=/tmp/zoho1"

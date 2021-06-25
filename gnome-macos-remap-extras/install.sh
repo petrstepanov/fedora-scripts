@@ -16,3 +16,5 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['XF86Laun
 echo "Go to Eclipse -> Window -> Preferences -> General -> Keys"
 echo "* Search for 'Content Assist', add 'Alt+Space' binding."
 echo "* Search for 'Toggle Source/Header, add 'Alt+Tab' binding."
+echo ""
+echo "Manually add ^(?!(?:Eclipse)\b)*$ negative lookahead for next-tab.json"
