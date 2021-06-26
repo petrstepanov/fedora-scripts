@@ -18,7 +18,7 @@ then
 	# Install ROOT dependencies
 	sudo dnf -y groupinstall "Development Tools" "Development Libraries" 
 	sudo dnf -y install git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel python openssl-devel
-	sudo dnf -y install libuuid-devel redhat-lsb-core gcc-gfortran pcre-devel mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel fftw-devel cfitsio-devel graphviz-devel avahi-compat-libdns_sd-devel openldap-devel python3-numpy libxml2-devel gsl-devel libuuid-devel readline-devel R-devel R-Rcpp-devel3 R-RInside-devel
+	sudo dnf -y install libuuid-devel redhat-lsb-core gcc-gfortran pcre-devel mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel fftw-devel cfitsio-devel graphviz-devel avahi-compat-libdns_sd-devel openldap-devel python3-numpy libxml2-devel gsl-devel libuuid-devel readline-devel R-devel R-Rcpp-devel R-RInside-devel
 
 	# Download ROOT (-O overwrite existing file)
 	cd ~/Downloads
