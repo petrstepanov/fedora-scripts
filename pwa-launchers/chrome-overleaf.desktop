@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Overleaf
+Icon=gnome-overleaf
+# Reddit explains how to create Chromium PWA web application with regular window decorations
+# https://www.reddit.com/r/kde/comments/i28jni/chrome_app_window_decoration/
+Exec=chromium-browser --profile-directory=Default --app=https://www.overleaf.com/project
+Categories=chrome-apps;
+# This can be obtained by typing "xprop WM_CLASS" in terminal and clicking on the window
+# It helps grouping windows under same icon in the dock
+StartupWMClass=www.overleaf.com__project

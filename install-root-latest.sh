@@ -46,6 +46,17 @@ then
 	sed -i "/#source-thisroot/d" ~/.bashrc
 	echo source `find $(pwd) -name "thisroot.sh" #source-thisroot` >> ~/.bashrc
 	source ~/.bashrc	
+	
+	# Create desktop launcher for .root files
+	launcher="$HOME/.local/share/applications/rootbrowse.desktop"
+	echo "[Desktop Entry]" >> $launcher
+	echo "Type=Application" >> $launcher
+	echo "Name=ROOT Browser" >> $launcher
+	echo "Comment=Open CERN ROOT files" >> $launcher
+	echo "Icon=gnome-cernroot" >> $launcher
+	echo "Exec=rootbrowse %F" >> $launcher
+	echo "Terminal=true" >> $launcher
+	echo "Categories=Science" >> $launcher
 else
 	echo Cannot determine the recent ROOT version
 fi
