@@ -49,6 +49,7 @@ then
 	
 	# Create desktop launcher for .root files
 	launcher="$HOME/.local/share/applications/rootbrowse.desktop"
+	rm $launcher
 	echo "[Desktop Entry]" >> $launcher
 	echo "Type=Application" >> $launcher
 	echo "Name=ROOT Browser" >> $launcher
