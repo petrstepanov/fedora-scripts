@@ -15,6 +15,9 @@ then
 	v=`echo "$v" | sed 's/\//\./'`
 	echo "$v"
 
+	# Update the system
+	sudo dnf -y update	
+
 	# Install ROOT dependencies
 	sudo dnf -y groupinstall "Development Tools" "Development Libraries" 
 	sudo dnf -y install git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel python openssl-devel
