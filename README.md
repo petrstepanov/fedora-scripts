@@ -65,4 +65,4 @@ sudo dnf -y install meld gnome-search-tool gthumb mediawriter
 Next steps are done by hand:
 * Setup Mailspring accounts and signatures.
 * Add Nextcloud and import calendars.
-* Install Yandex.Disk. [Download here](https://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm).
+* Install Yandex.Disk. [Download here](https://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm). Run `yandex-disk setup`.
