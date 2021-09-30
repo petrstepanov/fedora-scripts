@@ -28,10 +28,6 @@ At the login screen select **GNOME on Xorg**. This will not only allow AutoKey t
 
 Next, we will work on the GNOME extensions. We install the Dash to Dock, Caffeine and others:
 ```
-# Turn GNOME extensions on/off
-gnome-extensions enable dash-to-dock
-gnome-extensions disable background-logo@fedorahosted.org
-
 # Enable User extensions
 gsettings set org.gnome.shell.disable-user-extensions false
 
