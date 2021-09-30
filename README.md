@@ -60,7 +60,15 @@ sudo dnf install ulauncher
 ```
 Below we will install useful applications for everyday use
 ```
-sudo dnf -y install gitg meld gnome-search-tool gthumb mediawriter 
+sudo dnf -y install gitg menulibre meld gnome-search-tool gthumb mediawriter 
+
+# If running in MacBook Air 2013+
+sh ./install-facetime-hd-webcam.sh
+
+
+sh ./install-anydesk.sh
+sh ./install-code-dark.sh
+sh ./install-anydesk.sh
 
 # Install Eclipse IDE
 sh ./install-eclipse.sh
