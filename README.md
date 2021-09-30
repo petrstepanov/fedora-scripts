@@ -30,7 +30,8 @@ cd dash-to-dock
 make
 make install
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
-gnome-extensions disable background-logo@fedorahosted.org 
+gnome-extensions disable background-logo@fedorahosted.org
+sudo dnf install gnome-extensions-app
 
 # Restart
 sudo reboot
