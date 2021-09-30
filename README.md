@@ -64,8 +64,7 @@ sudo dnf -y install meld gnome-search-tool gthumb mediawriter
 ```
 Next steps are done by hand:
 * Setup Mailspring accounts and signatures.
-* Add Nextcloud and import calendars.
-* * https://indico.bnl.gov/export/categ/343.ics?from=-31d
+* Add Nextcloud and import calendars.<br/>https://indico.bnl.gov/export/categ/343.ics?from=-31d
 * * https://indico.bnl.gov/export/categ/344.ics?from=-31d
 * * https://indico.bnl.gov/export/categ/345.ics?from=-31d
 * * https://indico.bnl.gov/export/categ/346.ics?from=-31d
