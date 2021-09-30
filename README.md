@@ -19,6 +19,9 @@ cd gnome-macos-remap
 chmod +x install.sh
 sh install.sh
 
+# Enable User extensions
+gsettings set org.gnome.shell.disable-user-extensions false
+
 # Install Dash to Dock extension (recent ewlsh build)
 sudo dnf -y install sassc
 cd ~/Downloads
@@ -26,6 +29,8 @@ git clone -b ewlsh/gnome-40 https://github.com/ewlsh/dash-to-dock
 cd dash-to-dock
 make
 make install
+gnome-extensions enable dash-to-dock@micxgx.gmail.com
+gnome-extensions disable background-logo@fedorahosted.org 
 
 # Restart
 sudo reboot
