@@ -60,7 +60,7 @@ sudo dnf install ulauncher
 ```
 Below we will install useful applications for everyday use
 ```
-sudo dnf -y install meld gnome-search-tool gthumb mediawriter 
+sudo dnf -y install gitg meld gnome-search-tool gthumb mediawriter 
 
 # Install Eclipse IDE
 sh ./install-eclipse.sh
