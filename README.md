@@ -48,7 +48,7 @@ sudo dnf install gnome-extensions-app
 # Caffeine: https://extensions.gnome.org/extension/517/caffeine/
 # No overview at startup: https://extensions.gnome.org/extension/4099/no-overview/
 ```
-Finally we will tweak GNOME's appearance and install ULauncher app launcher
+Few GNOME appearance tweaks along with ULauncher app installation:
 ```
 # Tweak GNOME appearance
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
@@ -57,4 +57,8 @@ gsettings set org.gtk.settings.file-chooser sort-directories-first true
 
 # Install ULauncher
 sudo dnf install ulauncher
+```
+Below we will install useful applications for everyday use
+```
+sudo dnf -y install meld gnome-search-tool gthumb mediawriter 
 ```
