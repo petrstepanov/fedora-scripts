@@ -19,6 +19,18 @@ cd gnome-macos-remap
 chmod +x install.sh
 sh install.sh
 
+# Restart
+sudo reboot
+```
+
+At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. Open AutoKey, In Edit -> Preferences menu make sure the ☑️ **Automatically start AutoKey at login** checkbox is on.
+
+Next, we will work on the GNOME extensions. We install the Dash to Dock, Caffeine and others:
+```
+# Turn GNOME extensions on/off
+gnome-extensions enable dash-to-dock
+gnome-extensions disable background-logo@fedorahosted.org
+
 # Enable User extensions
 gsettings set org.gnome.shell.disable-user-extensions false
 
@@ -30,25 +42,20 @@ cd dash-to-dock
 make
 make install
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
+
+# Disable background logo extension
 gnome-extensions disable background-logo@fedorahosted.org
+
+# Install other useful extensions in GUI mode
 sudo dnf install gnome-extensions-app
+# Caffeine: https://extensions.gnome.org/extension/517/caffeine/
+# No overview at startup: https://extensions.gnome.org/extension/4099/no-overview/
 
-# Restart
-sudo reboot
-
-# Minor stuff
-sudo dnf -y install gnome-extension-app
-
-
-```
-At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. Open AutoKey, In Edit -> Preferences menu make sure the ☑️ **Automatically start AutoKey at login** checkbox is on.
-
-Next, we install the Dash to Dock and application launcher:
-```
-# Turn GNOME extensions on/off
-gnome-extensions enable dash-to-dock
-gnome-extensions disable background-logo@fedorahosted.org
-
-# Add minimize and maximize window buttons
+# Tweak GNOME appearance
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
+gsettings set org.gtk.settings.file-chooser sort-directories-first true
+
+#
+
 ```
