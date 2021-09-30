@@ -15,7 +15,9 @@ git clone https://github.com/petrstepanov/gnome-macos-remap
 cd gnome-macos-remap
 chmod +x install.sh
 sh install.sh
+cp /usr/share/applications/autokey-gtk.desktop ~/.config/autostart/
 
 # Restart
 sudo reboot
 ```
+At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. 
