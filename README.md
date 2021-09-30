@@ -26,8 +26,6 @@ git clone -b ewlsh/gnome-40 https://github.com/ewlsh/dash-to-dock
 cd dash-to-dock
 make
 make install
-gnome-extensions enable dash-to-dock
-gnome-extensions disable
 
 # Restart
 sudo reboot
@@ -41,6 +39,10 @@ At the login screen select **GNOME on Xorg**. This will not only allow AutoKey t
 
 Next, we install the Dash to Dock and application launcher:
 ```
+# Turn GNOME extensions on/off
+gnome-extensions enable dash-to-dock
+gnome-extensions disable background-logo@fedorahosted.org
+
 # Add minimize and maximize window buttons
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 ```
