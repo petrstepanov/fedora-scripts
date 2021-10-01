@@ -65,15 +65,22 @@ sudo dnf -y install gitg menulibre meld gnome-search-tool gthumb mediawriter
 # If running in MacBook Air 2013+
 sh ./install-facetime-hd-webcam.sh
 
+# Make launchers for a few PWAs that I use
+sh ./install-icons
+sh ./install-pwa-launchers.sh
 
 sh ./install-anydesk.sh
 sh ./install-code-dark.sh
-sh ./install-anydesk.sh
+sh ./install-simplenote-dark.sh
 
-# Install Eclipse IDE
+# Development tools
+sh ./install-ramdisk.sh
+sh ./install-root-latest.sh
+sh ./install-geant4-latest.sh
+sh ./copy-root-geant-sources.sh
 sh ./install-eclipse.sh
-
 ```
+
 Next steps are done by hand:
 * Setup Mailspring accounts and signatures.
 * Add Nextcloud and import calendars.<br/>https://indico.bnl.gov/export/categ/343.ics?from=-31d<br/>https://indico.bnl.gov/export/categ/344.ics?from=-31d</br>https://indico.bnl.gov/export/categ/345.ics?from=-31d</br>https://indico.bnl.gov/export/categ/346.ics?from=-31d</br>https://indico.bnl.gov/export/categ/347.ics?from=-31d</br>https://indico.bnl.gov/export/categ/218.ics?from=-31d
