@@ -7,23 +7,40 @@ function copySources () {
 }
 
 # Identify ROOT and Geant4 installations
-rootDir=~/Source/`ls -1 ~/Source | grep "root.*[0-9]$" | tail -1`/
-geantDir=~/Source/`ls -1 ~/Source | grep "geant.*[0-9]$" | tail -1`/source/
-echo "Found ROOT source directory: $rootDir"
-echo "Found Geant4 source directory: $geantDir"
+rootDir=`ls -1 ~/Source | grep "root.*[0-9]$" | tail -1`
+rootSourcePath=~/Source/$rootDir/
 
-# Copy ROOT and Geant4 sources
-destDir=~/Source/root-geant-sources/
-rm -rf $destDir && mkdir $destDir
-echo "Copying ROOT and Geant4 sources..."
-copySources $rootDir $destDir
-copySources $geantDir $destDir
+geantDir=`ls -1 ~/Source | grep "geant4.*[0-9]$" | tail -1`
+geantSourcePath=~/Source/$geantDir/source/
 
-# Copy ROOT sources only
-destDir=~/Source/root-sources/
-rm -rf $destDir && mkdir $destDir
-echo "Copying ROOT sources only..."
-copySources $rootDir $destDir
+# Identify the destination directories
+rootDestPath=~/Source/root-sources/
+geantDestPath=~/Source/geant4-sources/
+if [ -d ~/ramdisk-persistent/current ] 
+then
+    echo "Found RAMDISK install." 
+    rootDestPath=~/ramdisk-persistent/current/root-sources/
+    geantDestPath=~/ramdisk-persistent/current/geant4-sources/
+fi
 
-cd $destDir
-chmod -w ./*
+# Copy ROOT sources
+if [ ! -z "$rootDir" ]
+then
+    echo "Found ROOT source directory: $rootSourcePath"
+    rm -rf $rootDestPath && mkdir $rootDestPath
+    copySources $rootSourcePath $rootDestPath
+    cd $rootDestPath
+    chmod -w ./*
+fi
+
+# Copy Geant4 sources
+if [ ! -z "$geantDir" ]
+then
+    echo "Found Geant4 source directory: $geantSourcePath"
+    rm -rf $geantDestPath && mkdir $geantDestPath
+    copySources $geantSourcePath $geantDestPath
+    cd $geantDestPath
+    chmod -w ./*
+fi
+
+echo
