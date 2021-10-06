@@ -60,7 +60,7 @@ sudo dnf install ulauncher
 ```
 Below we will install useful applications for everyday use
 ```
-sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre texlive-scheme-full texmaker
+sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre texlive-scheme-full texmaker xpad
 
 # If running in MacBook Air 2013+ fix webcam
 sh ./install-facetime-hd-webcam.sh
