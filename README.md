@@ -60,14 +60,18 @@ sudo dnf install ulauncher
 ```
 Below we will install useful applications for everyday use
 ```
-sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre texlive-scheme-full texmaker
+sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre \
+                    texlive-scheme-full texmaker xpad foliate htop neofetch
 
-# If running in MacBook Air 2013+
+# If running in MacBook Air 2013+ fix webcam
 sh ./install-facetime-hd-webcam.sh
 
 # Make launchers for a few PWAs that I use
 sh ./install-icons
 sh ./install-pwa-launchers.sh
+
+# Do not show "Chrome did not shut down correctly" error
+sh ./install-chrome-crash-fix.sh
 
 sh ./install-anydesk.sh
 sh ./install-code-dark.sh
