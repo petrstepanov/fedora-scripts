@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p ~/bin
-cp ./bin/chrome-crash-fix.sh ~/bin
+cp ./HOME/bin/chrome-crash-fix.sh ~/bin
 chmod +x ~/bin/chrome-crash-fix.sh
 
 # Create desktop launcher for .root files
