@@ -61,7 +61,7 @@ Below we will install useful applications for everyday use
 
 ```
 sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre \
-                    texlive-scheme-full texmaker xpad foliate htop neofetch
+                    texlive-scheme-full texmaker xpad foliate htop neofetch cpu-x
 
 # If running in MacBook Air 2013+ fix webcam
 sh ./install-facetime-hd-webcam.sh
@@ -89,3 +89,4 @@ Next steps are done by hand:
 * Setup Mailspring accounts and signatures.
 * Add Nextcloud and import calendars.<br/>https://www.officeholidays.com/ics-fed/usa<br/>https://indico.bnl.gov/export/categ/343.ics?from=-31d<br/>https://indico.bnl.gov/export/categ/344.ics?from=-31d</br>https://indico.bnl.gov/export/categ/345.ics?from=-31d</br>https://indico.bnl.gov/export/categ/346.ics?from=-31d</br>https://indico.bnl.gov/export/categ/347.ics?from=-31d</br>https://indico.bnl.gov/export/categ/218.ics?from=-31d
 * Install Yandex.Disk. [Download here](https://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm). Run `yandex-disk setup`.
+* Install `synth-shell` for [better reading the Terminal](https://github.com/andresgongora/synth-shell) output.
