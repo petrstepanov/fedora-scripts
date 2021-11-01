@@ -9,7 +9,8 @@ CONFIG=~/.ssh/config
 touch $CONFIG
 echo "Host *" >> $CONFIG
 echo "   ServerAliveInterval 100" >> $CONFIG
-echo "   TCPKeepAlive no" >> $CONFIG
+echo "   ServerAliveCountMax 10" >> $CONFIG
+#echo "   TCPKeepAlive no" >> $CONFIG
 
 # Set user permissions for SSH configuration file
 # https://serverfault.com/questions/253313/ssh-returns-bad-owner-or-permissions-on-ssh-config
