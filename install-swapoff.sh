@@ -15,7 +15,7 @@ echo "Icon=drive-harddisk" >> $launcher
 #echo "Exec=pkexec sudo /home/$USER/bin/swapoff.sh" >> $launcher
 echo "Exec=bash -c 'sleep 20 && pkexec sudo /home/petrstepanov/bin/swapoff.sh'" >> $launcher
 echo "Categories=Utility" >> $launcher
-echo "Terminal=true" >> $launcher
+echo "Terminal=false" >> $launcher
 #echo "X-GNOME-Autostart-enabled=true" >> $launcher
 #echo "X-GNOME-Autostart-Delay=20" >> $launcher
 
