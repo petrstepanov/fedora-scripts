@@ -1,0 +1,50 @@
+/* Geary Sidebar Resize */
+.geary-folder-frame {
+	min-width: 200px;
+}
+
+/* Increase row spacing */
+.geary-conversation-frame .view {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+/* Tweak button label spacing */
+.geary-main-window button label {
+	padding-left: 5px;
+}
+
+/* Remove email header background change */
+.geary-main-window viewport row {
+	background: white;
+	/* transition: all 1s ease-out; */
+}
+
+/* Add line between email header and body */
+.geary-message-body {
+	border-top: 1px solid #ddd;
+}
+
+/* Recipient pills */
+.geary-headers flowboxchild {
+	background-color: white;
+	border-radius: 24px;
+	padding: 2px 10px;
+}
+.geary-headers flowboxchild:hover {
+	background-color: @theme_bg_color;
+	transition: background-color 250ms ease-out;
+}
+
+/* Align Email Headers */
+.geary-headers.vertical > grid.horizontal > *:first-child:not(flowbox){
+	margin-left: 9px;
+}
+
+.geary-headers.vertical > label.geary-header-value {
+	padding-left: 9px;
+}
+
+.geary-headers > .horizontal .dim-label:first-child {
+	padding-top: 2px;
+}
