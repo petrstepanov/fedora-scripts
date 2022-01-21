@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=conky
+Exec=bash -c "sleep 10 && conky -b -c $HOME/.config/conky.conf --daemonize --pause=1"
+StartupNotify=false
+Terminal=false
+Icon=conky-logomark-violet
+Categories=System;Monitor;

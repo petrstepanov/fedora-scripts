@@ -86,6 +86,13 @@ sh ./copy-root-geant-sources.sh
 sh ./install-eclipse.sh
 ```
 
+Install Linux Mint Webapp Manager
+
+```
+sudo dnf copr enable refi64/webapp-manager
+sudo dnf install webapp-manager
+```
+
 Next steps are done by hand:
 * Setup Mailspring accounts and signatures.
 * Add Nextcloud and import calendars.<br/>https://www.officeholidays.com/ics-fed/usa<br/>https://indico.bnl.gov/export/categ/343.ics?from=-31d<br/>https://indico.bnl.gov/export/categ/344.ics?from=-31d</br>https://indico.bnl.gov/export/categ/345.ics?from=-31d</br>https://indico.bnl.gov/export/categ/346.ics?from=-31d</br>https://indico.bnl.gov/export/categ/347.ics?from=-31d</br>https://indico.bnl.gov/export/categ/218.ics?from=-31d
