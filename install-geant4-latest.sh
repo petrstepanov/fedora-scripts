@@ -41,13 +41,14 @@ then
 #	unset LD_LIBRARY_PATH
 
 	# Compile Geant4
-	cmake -DCMAKE_INSTALL_PREFIX=~/Applications/geant$v/ ~/Source/geant$v
-	cmake -DGEANT4_INSTALL_DATA=ON .
-	cmake -DGEANT4_USE_OPENGL_X11=ON .
-	cmake -DGEANT4_USE_QT=ON .
-	cmake -DGEANT4_USE_XM=ON .
-	cmake -DGEANT4_BUILD_MULTITHREADED=ON .
-	cmake -DCMAKE_BUILD_TYPE=Debug .
+	# cmake -DCMAKE_INSTALL_PREFIX=~/Applications/geant$v/ ~/Source/geant$v
+	# cmake -DGEANT4_INSTALL_DATA=ON .
+	# cmake -DGEANT4_USE_OPENGL_X11=ON .
+	# cmake -DGEANT4_USE_QT=ON .
+	# cmake -DGEANT4_USE_XM=ON .
+	# cmake -DGEANT4_BUILD_MULTITHREADED=ON .
+	# cmake -DCMAKE_BUILD_TYPE=Debug .
+	cmake -DCMAKE_INSTALL_PREFIX=~/Applications/geant$v/ -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_OPENGL_X11=ON -DGEANT4_USE_QT=ON -DGEANT4_USE_XM=ON -DGEANT4_BUILD_MULTITHREADED=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_USE_RELATIVE_PATHS_IN_DEBUG_INFO=TRUE ~/RAMDisk/geant$v
 
 	# make
 	make -j$(nproc)

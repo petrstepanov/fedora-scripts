@@ -42,6 +42,8 @@ then
 
 	# Compile ROOT
 	cmake -Dall=ON -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=~/Applications/root-$v ~/Source/root-$v
+	# cmake -Dall=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_USE_RELATIVE_PATHS_IN_DEBUG_INFO=TRUE -DCMAKE_INSTALL_PREFIX=~/Applications/root-$v ~/RAMDisk/root-$v
+	# cmake -Dall=ON -DCMAKE_BUILD_TYPE=Debug -DLLVM_BUILD_TYPE=Debug -DLLVM_USE_RELATIVE_PATHS_IN_DEBUG_INFO=TRUE -DCMAKE_INSTALL_PREFIX=~/Applications/root-$v ~/RAMDisk/root-$v
 	cmake --build . --target install -- -j$(nproc)
 
 	# Source ROOT

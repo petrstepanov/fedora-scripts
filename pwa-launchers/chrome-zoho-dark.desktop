@@ -5,7 +5,7 @@ Name=Zoho Mail Payments
 Icon=gnome-zoho-2
 # Reddit explains how to create Chromium PWA web application with regular window decorations
 # https://www.reddit.com/r/kde/comments/i28jni/chrome_app_window_decoration/
-Exec=chromium-browser --profile-directory=Default --user-data-dir=/tmp/zoho2 --class=zohopayments --app=https://mail.zoho.com/
+Exec=chromium-browser --profile-directory=Default --user-data-dir=/tmp/zoho2 --class=zohopayments --app=https://mail.zoho.com/zm/
 Categories=chrome-apps;
 # This can be obtained by typing "xprop WM_CLASS" in terminal and clicking on the window
 # It helps grouping windows under same icon in the dock
