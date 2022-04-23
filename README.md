@@ -14,7 +14,7 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 sudo dnf -y upgrade
 
 # Install Broadcom Wi-Fi Driver
-sudo dnf install broadcom-wl
+sudo dnf install -y broadcom-wl
 
 # Install keyboard repmap
 sudo dnf -y install autokey autokey-gtk
