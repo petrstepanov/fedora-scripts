@@ -28,7 +28,12 @@ sh install.sh
 sudo reboot
 ```
 
-At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. Open AutoKey, In Edit -> Preferences menu make sure the ☑️ **Automatically start AutoKey at login** checkbox is on.
+At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. Open AutoKey, In Edit -> Preferences menu make sure the ☑️ **Automatically start AutoKey at login** checkbox is on. To start AutoKey in debug mode, run in Terminal:
+
+```
+sed -i "Exec=autokey-gtk;Exec=autokey-gtk -l;"/home/petrstepanov/.config/autostart/autokey.desktop
+sed -i "Terminal=false;Terminal=true;"/home/petrstepanov/.config/autostart/autokey.desktop
+```
 
 Next, we will work on the GNOME extensions. We install the Dash to Dock, Caffeine and others:
 
