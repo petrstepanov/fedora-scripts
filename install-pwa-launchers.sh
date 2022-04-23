@@ -32,6 +32,9 @@ DESKTOP_FILE="chromium-browser.desktop"
 DESKTOP_FILE_DARK="chromium-browser-dark.desktop"
 cp /usr/share/applications/$DESKTOP_FILE ~/.local/share/applications/$DESKTOP_FILE_DARK
 
+# Install icons for PWAs
+sh ./install-icons.sh
+
 # using double quotes in sed will tell shell to substitute environment variables
 # https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
 # sed allows using any character as a separator (trying ;)
@@ -43,6 +46,7 @@ sed -i "s;chromium-browser;chromium-browser --class=chromiumdark;" ~/.local/shar
 sed -i "s;StartupWMClass=Chromium-browser;StartupWMClass=chromiumdark;" ~/.local/share/applications/$DESKTOP_FILE_DARK
 
 echo "Installing launchers..."
+rm -rf ~/.local/share/applications/chrome-*.desktop
 xdg-desktop-menu install ./pwa-launchers/*
 
 # add user's home folder path to installed launchers
