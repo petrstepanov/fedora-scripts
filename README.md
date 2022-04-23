@@ -18,7 +18,7 @@ sudo dnf install -y broadcom-wl
 
 # Install keyboard repmap
 sudo dnf -y install autokey autokey-gtk
-mkdir ~/Developemnt && cd ~/Development
+mkdir ~/Development && cd ~/Development
 git clone https://github.com/petrstepanov/gnome-macos-remap
 cd gnome-macos-remap
 chmod +x install.sh
