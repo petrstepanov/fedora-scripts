@@ -43,6 +43,7 @@ gnome-extensions disable background-logo@fedorahosted.org
 sudo dnf install gnome-extensions-app
 
 # Dash to Dock: https://extensions.gnome.org/extension/307/dash-to-dock/
+# Dash to Panel: https://extensions.gnome.org/extension/1160/dash-to-panel/
 # Caffeine: https://extensions.gnome.org/extension/517/caffeine/
 # No overview at startup: https://extensions.gnome.org/extension/4099/no-overview/
 # Easy Screencast: https://extensions.gnome.org/extension/690/easyscreencast/
