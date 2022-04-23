@@ -13,7 +13,7 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 # Upgrade the system
 sudo dnf -y upgrade
 
-# Install Broadcom Wi-Fi Driver
+# Install Broadcom Wi-Fi Driver (if MacBook)
 sudo dnf install -y broadcom-wl
 
 # Install keyboard repmap
