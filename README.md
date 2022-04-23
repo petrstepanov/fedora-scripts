@@ -35,6 +35,11 @@ sed -i "s;Exec=autokey-gtk;Exec=autokey-gtk -l;" /home/petrstepanov/.config/auto
 sed -i "s;Terminal=false;Terminal=true;" /home/petrstepanov/.config/autostart/autokey.desktop
 ```
 
+To rename `Documents` into `Development` folder in Nautilus run:
+```
+sed -i "s;$HOME/Development;$HOME/Documents;" /home/petrstepanov/.config/user-dirs.dirs
+```
+
 Next, we will work on the GNOME extensions. We install the Dash to Dock, Caffeine and others:
 
 ```
