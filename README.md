@@ -10,6 +10,9 @@ First off, after a fresh install of Fedora a system upgrage is needed. Upgrade i
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
 sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+# Enable Flatpak repository
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # Upgrade the system
 sudo dnf -y upgrade
 
@@ -28,7 +31,17 @@ sh install.sh
 sudo reboot
 ```
 
-At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. Open AutoKey, In Edit -> Preferences menu make sure the ☑️ **Automatically start AutoKey at login** checkbox is on.
+At the login screen select **GNOME on Xorg**. This will not only allow AutoKey to wrk properly, but also will let you to forward the X11 over the SSH which is a must have feature when working with remote computers. Open AutoKey, In Edit -> Preferences menu make sure the ☑️ **Automatically start AutoKey at login** checkbox is on. To start AutoKey in debug mode, run in Terminal:
+
+```
+sed -i "s;Exec=autokey-gtk;Exec=autokey-gtk -l;" /home/petrstepanov/.config/autostart/autokey.desktop
+sed -i "s;Terminal=false;Terminal=true;" /home/petrstepanov/.config/autostart/autokey.desktop
+```
+
+To rename `Documents` into `Development` folder in Nautilus run:
+```
+sed -i "s;$HOME/Development;$HOME/Documents;" /home/petrstepanov/.config/user-dirs.dirs
+```
 
 Next, we will work on the GNOME extensions. We install the Dash to Dock, Caffeine and others:
 
