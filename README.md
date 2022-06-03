@@ -88,6 +88,14 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf install code
 ```
 
+Microsoft Teams:
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[teams]\nname=teams\nbaseurl=https://packages.microsoft.com/yumrepos/ms-teams\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/teams.repo'
+sudo dnf install teams
+```
+
+Other stuff:
 ```
 sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre \
                     texlive-scheme-full texmaker xpad foliate htop neofetch cpu-x \
