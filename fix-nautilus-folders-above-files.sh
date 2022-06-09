@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mkdir -p $HOME/bin
-cp ./HOME/bin/nautilus-sort-fix.sh $HOME/bin/nautilus-sort-fix.sh
-chmod +x $HOME/bin/nautilus-sort-fix.sh
+mkdir -p $HOME/.local/bin
+cp ./HOME/bin/nautilus-sort-fix.sh $HOME/.local/bin/nautilus-sort-fix.sh
+chmod +x $HOME/.local/bin/nautilus-sort-fix.sh
 
-# Create desktop launcher for .root files
+# Create desktop launcher
 launcher="$HOME/.config/autostart/nautilus-sort-fix.desktop"
 rm -f $launcher
 echo "[Desktop Entry]" >> $launcher
