@@ -29,7 +29,7 @@ sudo dnf groupinstall "Development Tools" "Development Libraries"
 sudo dnf install cmake
 
 # Install ROOT
-sudo dnf install root root-* liburing
+sudo dnf install root root-* liburing*
 
 # Replace new GNOME text editor with nano
 sudo dnf remove -y gnome-text-editor && sudo dnf install -y gedit
