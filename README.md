@@ -109,7 +109,7 @@ Other stuff:
 ```
 sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre \
                     texlive-scheme-full texmaker xpad foliate htop neofetch cpu-x \
-                    dconf-editor gnome-search-tool
+                    dconf-editor
 
 # If running in MacBook Air 2013+ fix webcam
 sh ./install-facetime-hd-webcam.sh
