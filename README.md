@@ -24,6 +24,13 @@ sudo dnf -y upgrade
 # Install Broadcom Wi-Fi Driver (if MacBook)
 sudo dnf install -y broadcom-wl
 
+# Install Development Tools
+sudo dnf groupinstall "Development Tools" "Development Libraries"
+sudo dnf install cmake
+
+# Install ROOT
+sudo dnf install root root-*
+
 # Install keyboard repmap
 sudo dnf -y install autokey autokey-gtk
 mkdir ~/Development && cd ~/Development
