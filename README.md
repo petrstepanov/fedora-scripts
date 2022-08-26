@@ -31,6 +31,9 @@ sudo dnf install cmake
 # Install ROOT
 sudo dnf install root root-*
 
+# Replace new GNOME text editor with nano
+sudo dnf uninstall gnome-text-editor && sudo dnf install gedit
+
 # Install keyboard repmap
 sudo dnf -y install autokey autokey-gtk
 mkdir ~/Development && cd ~/Development
