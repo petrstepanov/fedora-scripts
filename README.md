@@ -24,6 +24,16 @@ sudo dnf -y upgrade
 # Install Broadcom Wi-Fi Driver (if MacBook)
 sudo dnf install -y broadcom-wl
 
+# Install Development Tools
+sudo dnf groupinstall "Development Tools" "Development Libraries"
+sudo dnf install cmake
+
+# Install ROOT
+sudo dnf install root root-* liburing*
+
+# Replace new GNOME text editor with nano
+sudo dnf remove -y gnome-text-editor && sudo dnf install -y gedit
+
 # Install keyboard repmap
 sudo dnf -y install autokey autokey-gtk
 mkdir ~/Development && cd ~/Development
@@ -99,7 +109,7 @@ Other stuff:
 ```
 sudo dnf -y install gitg gnome-search-tool gthumb mediawriter meld menulibre \
                     texlive-scheme-full texmaker xpad foliate htop neofetch cpu-x \
-                    dconf-editor gnome-search-tool
+                    dconf-editor
 
 # If running in MacBook Air 2013+ fix webcam
 sh ./install-facetime-hd-webcam.sh
@@ -123,16 +133,20 @@ sh ./copy-root-geant-sources.sh
 sh ./install-eclipse.sh
 ```
 
-Install Linux Mint Webapp Manager
+Install VirtualBox
 
 ```
-sudo dnf copr enable refi64/webapp-manager
-sudo dnf install webapp-manager
+cd ~/Downloads
+wget https://www.virtualbox.org/download/oracle_vbox.asc
+sudo rpm --import oracle_vbox.asc
+wget https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+sudo cp ./virtualbox.repo /etc/yum.repos.d/
+sudo dnf -y install VirtualBox-6*
 ```
 
 Next steps are done by hand:
 * Setup Mailspring accounts and signatures.
-* Add Nextcloud and import calendars.<br/>https://www.officeholidays.com/ics-fed/usa<br/>https://indico.bnl.gov/export/categ/343.ics?from=-31d<br/>https://indico.bnl.gov/export/categ/344.ics?from=-31d</br>https://indico.bnl.gov/export/categ/345.ics?from=-31d</br>https://indico.bnl.gov/export/categ/346.ics?from=-31d</br>https://indico.bnl.gov/export/categ/347.ics?from=-31d</br>https://indico.bnl.gov/export/categ/218.ics?from=-31d
+* Add Nextcloud and import calendars.<br/>https://www.officeholidays.com/ics-fed/usa<br/>https://indico.bnl.gov/export/categ/343.ics?from=       -31d<br/>https://indico.bnl.gov/export/categ/344.ics?from=-31d</br>https://indico.bnl.gov/export/categ/345.ics?from=-31d</br>https://indico.bnl.gov/export/categ/346.ics?from=-31d</br>https://indico.bnl.gov/export/categ/347.ics?from=-31d</br>https://indico.bnl.gov/export/categ/218.ics?from=-31d
 * Install Yandex.Disk. [Download here](https://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm). Run `yandex-disk setup`.
 * Install `synth-shell` for [better reading the Terminal](https://github.com/andresgongora/synth-shell) output.
 
