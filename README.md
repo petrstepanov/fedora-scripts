@@ -173,7 +173,7 @@ sudo dnf install latex-scheme-full texmaker
 
 Install a few fonts
 ```
-sudo dnf install -y google-robo* sudo dnf install texlive-cm-unicode
+sudo dnf install -y google-robo* texlive-cm-unicode
 ```
 
 Fix Nautilus sorting folders before files
