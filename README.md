@@ -47,6 +47,12 @@ Install ROOT (Release Version)
 sudo dnf install root root-* liburing*
 ```
 
+Install Geant4 (Release version)
+```
+sudo dnf copr enable yanqiyu/geant4 
+sudo dnf install geant4 geant4-data
+```
+
 Replace new GNOME text editor with nano
 ```
 sudo dnf remove -y gnome-text-editor && sudo dnf install -y gedit
