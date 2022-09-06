@@ -102,6 +102,8 @@ Install ULauncher
 sudo dnf install ulauncher
 ```
 
+Install Simle from flatpak.
+
 Below we will install useful applications for everyday use:
 
 Visual Studio Code:
@@ -172,6 +174,11 @@ sudo dnf install latex-scheme-full texmaker
 Install a few fonts
 ```
 sudo dnf install -y google-robo* sudo dnf install texlive-cm-unicode
+```
+
+Fix Nautilus sorting folders before files
+```
+./fix-nautilus-folders-above-files.sh
 ```
 
 Next steps are done by hand:
