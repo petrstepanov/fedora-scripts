@@ -7,8 +7,8 @@
 
 # Change Drip in GNOME settings
 ## Backup default sound
-sudo mv /usr/share/sounds/gnome/default/alerts/drip.ogg /usr/share/sounds/gnome/default/alerts/drip.bak.ogg
-sudo cp /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga /usr/share/sounds/gnome/default/alerts/drip.ogg
+sudo mv /usr/share/sounds/gnome/default/alerts/bark.ogg /usr/share/sounds/gnome/default/alerts/bark.bak.ogg
+sudo cp ./bark.ogg /usr/share/sounds/gnome/default/alerts/bark.ogg
 
 # Restart Gnome shell
 killall -3 gnome-shell
