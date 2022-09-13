@@ -1,0 +1,68 @@
+/* Tweak email header background change */
+.geary-main-window viewport row {
+	background-color: white;
+}
+
+.geary-main-window viewport row:not(:last-child) {
+	transition: all 0.5s ease-out;
+}
+
+.geary-main-window viewport row:not(:last-child):hover {
+	background-color: #EBEAE9;
+}
+
+/*
+.geary-main-window viewport row .geary-message-summary {
+	border-radius: 8px;
+}
+
+.geary-main-window viewport row.geary-expanded .geary-message-summary {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.geary-main-window viewport row .geary-message-summary {
+	background-color: white;
+	transition: background-color 0.5s ease-out;
+}
+
+.geary-main-window viewport row.geary-expanded-previous-sibling:hover .geary-message-summary {
+	background-color: #eee;
+} */
+
+/* Add line between email header and body */
+.geary-message-body {
+	border-top: 1px solid #ddd;
+}
+
+/* Recipient pills */
+.geary-main-window viewport row .geary-message-summary flowboxchild {
+	background-color: transparent;
+	border-radius: 24px;
+	padding: 2px 10px;
+	/* transition: background-color 250ms ease-out; */
+}
+.geary-main-window viewport row .geary-message-summary flowboxchild:hover {
+	background-color: @theme_bg_color;
+}
+.geary-main-window viewport row:last-child .geary-message-summary flowboxchild:hover {
+	background-color: #eee;
+}
+
+/* Align Email Headers */
+.geary-headers.vertical > grid.horizontal > *:first-child:not(flowbox){
+	margin-left: 9px;
+}
+
+.geary-headers.vertical > label.geary-header-value {
+	padding-left: 9px;
+}
+
+.geary-headers > .horizontal .dim-label:first-child {
+	padding-top: 2px;
+}
+
+.geary-match {
+	background-color: #33d17a;
+	color: white
+}
