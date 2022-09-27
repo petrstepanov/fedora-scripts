@@ -50,14 +50,7 @@ rm -rf ~/.local/share/applications/chrome-*.desktop
 xdg-desktop-menu install ./pwa-launchers/*
 
 # add user's home folder path to installed launchers
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-soundcloud-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-figma-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-snipcart-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-zoho-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-protonmail-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-slack-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-teams-dark.desktop
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/chrome-simplenote-dark.desktop
+sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/*-dark.desktop
 
 # Explicitly set --user-data-dir=~/.config/chromium for Chromium
 # DESKTOP_FILE="chromium-browser.desktop"
