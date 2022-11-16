@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir -p $HOME/bin
+mkdir -p $HOME/.local/bin
 cp ./HOME/bin/swapoff.sh $HOME/.local/bin/
-chmod +x $HOME/.local/bin/
+chmod +x $HOME/.local/bin/swapoff.sh
 
 # Create desktop launcher for .root files
 launcher="$HOME/.config/autostart/swapoff.desktop"

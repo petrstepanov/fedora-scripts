@@ -2,7 +2,7 @@
 
 while :
 do
-	swapoff -a
+	sudo swapoff -a
 	echo "Swap is disabled."
-        sleep 10
+	sleep 10
 done
