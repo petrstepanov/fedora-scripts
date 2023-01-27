@@ -5,7 +5,7 @@ Name=Zoho Mail Info
 Icon=gnome-zoho
 # Reddit explains how to create Chromium PWA web application with regular window decorations
 # https://www.reddit.com/r/kde/comments/i28jni/chrome_app_window_decoration/
-Exec=chromium-browser --profile-directory=Default --user-data-dir=/tmp/zoho1 --class=zohoinfo --app=https://mail.zoho.com/zm/
+Exec=chromium-browser --user-data-dir=.config/chromium/usr-zoho1 --class=zohoinfo --app=https://mail.zoho.com/zm/
 Categories=chrome-apps;
 # This can be obtained by typing "xprop WM_CLASS" in terminal and clicking on the window
 # It helps grouping windows under same icon in the dock
@@ -15,3 +15,5 @@ StartupWMClass=zohoinfo
 # Googled - it seems to be a bug. Workaround is 
 # https://askubuntu.com/questions/35392/how-to-launch-a-new-instance-of-google-chrome-from-the-command-line
 # add "--user-data-dir=/tmp/zoho1"
+
+# OK Shit. 

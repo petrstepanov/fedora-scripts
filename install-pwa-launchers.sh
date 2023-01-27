@@ -47,10 +47,15 @@ sed -i "s;StartupWMClass=Chromium-browser;StartupWMClass=chromiumdark;" ~/.local
 
 echo "Installing launchers..."
 rm -rf ~/.local/share/applications/chrome-*.desktop
-xdg-desktop-menu install ./pwa-launchers/*
+#mkdir -p ./pwa-launchers-temp
+#cp ./pwa-launchers/* ./pwa-launchers-temp
 
 # add user's home folder path to installed launchers
-sed -i "s;XDG_CONFIG_HOME=;XDG_CONFIG_HOME=$HOME;" ~/.local/share/applications/*-dark.desktop
+# sed -i "s;_$HOME_;$HOME;" ./pwa-launchers-temp/*.desktop
+
+xdg-desktop-menu install ./pwa-launchers/*
+
+rm -rf ./pwa-launchers-temp
 
 # Explicitly set --user-data-dir=~/.config/chromium for Chromium
 # DESKTOP_FILE="chromium-browser.desktop"
