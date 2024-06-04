@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=OneDrive
+Exec=onedrive --monitor
+StartupNotify=false
+Terminal=false
+Icon=gnome-onedrive
+Categories=System;
